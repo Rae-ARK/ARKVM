@@ -9,6 +9,15 @@ supported outcome (see "Removal and graduation").
 This is a play area. It is deliberately low-ceremony: small stages, no
 stability promise, and a clean exit.
 
+> **Update 2026-09-20.** Rei is now **[decided]** to be the official native
+> source language of ARKlight
+> ([`../Foundational/WHAT-REI-IS.md`](../Foundational/WHAT-REI-IS.md)), so
+> the "playground", "Fun tier" and "not accepted" framing in this file no
+> longer describes Rei as a whole. Its C99 mapping, file types and stage
+> ladder remain useful input. Whether an alpha-only guard survives as a
+> *maturity* gate is **[open]** (`WHAT-REI-IS.md`, open question 8). The
+> body below is unchanged.
+
 ## TL;DR
 
 - Two new file types: **`.rei`** (site source) and **`arklight.config.rei`**

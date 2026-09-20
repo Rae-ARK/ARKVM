@@ -33,6 +33,8 @@ needs today.
 | --- | --- |
 | [`WHAT-ARKVM-IS.md`](Foundational/WHAT-ARKVM-IS.md) | The definition, where ARKVM sits in the stack, where the JVM comparison holds and where it breaks, what is and is not guaranteed today. |
 | [`TERMINOLOGY.md`](Foundational/TERMINOLOGY.md) | The five meanings "ARKVM" has had across the ecosystem and which one this repo uses; a glossary (IR vs `.arklight`, backend vs environment, embedder, the two Reis). |
+| [`WHAT-REI-IS.md`](Foundational/WHAT-REI-IS.md) | What Rei (ARKlight's official native source language) and REIlight are, the full stack down to a native app, ARKVM as AOT-only gatekeeper with its own engine, design stance, feature layers, open questions. |
+| [`REI-SYLLABUS.md`](Foundational/REI-SYLLABUS.md) | Draft course syllabus for Rei. A template, not an approved curriculum. |
 | [`PRIOR-ART.md`](Foundational/PRIOR-ART.md) | What ARKVM takes from, and refuses from, the JVM Specification, WebAssembly, Flutter's engine, and the ecosystem's own earlier designs. External sources cited by section, with dates. |
 
 ### [`Proposal/`](Proposal/README.md) unsettled
@@ -53,7 +55,7 @@ Empty. No proposal has been accepted, so no staging ladder exists yet.
 
 | Path | What it is | Caveat |
 | --- | --- | --- |
-| `reference/docs/LOST.md` | What the Rei language gives up relative to Java, by layer. | Written for the Rei-Src workspace. Its "no runtime / no VM underneath" framing describes the playground phase, before Rei is standalone. See the execution-model proposal, "Effect on existing docs". |
+| `reference/docs/LOST.md` | What the Rei language gives up relative to Java, by layer. | Written for the Rei-Src workspace. Its "no runtime / no VM underneath" framing describes the playground phase, before Rei is standalone. Its section 6 "likely fate" table proposed dropping classes, inheritance, interfaces and abstract; the hybrid model in `WHAT-REI-IS.md` reverses that (see its open question 3). See also the execution-model proposal, "Effect on existing docs". |
 | `reference/README.md` | Describes the Rei-Src layout. | Stale here: it lists an `ARKlight/` clone and `PROVENANCE.txt` files that are not in this repo. |
 | `reference/reference/openjdk/` | A GPL-2.0-only slice of OpenJDK (`java.base`, plus the javac parser and tree). | Design reference only. Do not copy code from it (see `LOST.md` section 7). |
 

@@ -15,10 +15,33 @@ It is also the layer underneath Rei, the way the JVM is the layer
 underneath Java: Rei's compiler targets `.arklight`, and ARKVM is what runs
 `.arklight`. (Maintainer framing, 2026-09-19.)
 
+## Decided since **[decided]**
+
+_Added 2026-09-20 from `WHAT-REI-IS.md`, which is the single home for
+these. Restated here only so this file is not read as contradicting it._
+
+- **ARKVM is AOT only, and it is the gatekeeper.** Nothing is interpreted on
+  the device. ARKVM verifies `.arklight`, then lowers it ahead of time
+  through the target's interface to that platform's native runtime.
+- **ARKVM includes an engine**: custom and browser-like, standing in for the
+  HTML and CSS a WebView would have supplied, covering ARKlight's own closed
+  vocabulary and not a full browser.
+- **The nearer comparison is Flutter's release mode, not the JVM.** The JVM
+  comparison below still holds for "the layer under the language that knows
+  only the artifact".
+- **The maintainer's motivation** is WebView limits plus unification (one
+  language for every target), not only the pixel-perfect guarantee.
+- **REIlight** is a superset of ARKlight and distinct from it. Its contents,
+  including whether ARKVM and the engine are part of it, are **[open]**
+  (`WHAT-REI-IS.md`, open question 16).
+
+The sections below were written before these decisions. Where they say
+"runtime" or "runs", read them under the AOT-only constraint.
+
 ## Where it sits
 
 ```
- authoring       Python today  ->  Rei (planned, standalone language)
+ authoring       Python (stays)  |  Rei (official native language; no compiler yet)
      |
      v
  compiler        ARK AST -> normalization -> validation -> Website IR
@@ -138,6 +161,7 @@ for that question.
 
 ## Read next
 
+- [`WHAT-REI-IS.md`](WHAT-REI-IS.md): Rei, REIlight, and the decisions above.
 - [`TERMINOLOGY.md`](TERMINOLOGY.md): which "ARKVM" this repo means, and the glossary.
 - [`PRIOR-ART.md`](PRIOR-ART.md): what the JVM Specification, WebAssembly and Flutter teach, and what ARKVM refuses to copy.
 - [`../Proposal/ARKVM-EXECUTION-MODEL-PROPOSAL.md`](../Proposal/ARKVM-EXECUTION-MODEL-PROPOSAL.md)

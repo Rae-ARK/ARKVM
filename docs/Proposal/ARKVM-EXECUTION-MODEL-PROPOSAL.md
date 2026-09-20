@@ -14,6 +14,20 @@ outcome.
   [`PIXEL-PERFECT-CONTRACT-PROPOSAL.md`](PIXEL-PERFECT-CONTRACT-PROPOSAL.md),
   the single home for that question.
 
+> **Update 2026-09-20.** Maintainer decisions recorded in
+> [`../Foundational/WHAT-REI-IS.md`](../Foundational/WHAT-REI-IS.md) now
+> constrain this proposal: ARKVM is **AOT only** (nothing is interpreted on
+> the device) and **includes a custom engine**. Shape B says ARKVM owns "the
+> interpretation of the closed vocabulary" and shape C says it runs an
+> instruction section. Under AOT only, ARKVM lowers the closed vocabulary
+> (and any future behavior IR) to native code instead, so A, B and C need
+> re-reading under that constraint. The stated justification below is the
+> pixel-perfect guarantee; the maintainer's stated motivation is WebView
+> limits plus unification, and under an owned engine both point at one
+> design (`WHAT-REI-IS.md`, open question 13 holds the conditions). Section
+> 10, question 8 is that document's open question 14. The body below is
+> unchanged.
+
 ## TL;DR
 
 - Today's `.arklight` is a **declarative tree with a closed behavior
